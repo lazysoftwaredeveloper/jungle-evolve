@@ -1,0 +1,12 @@
+{
+  "name": "jungle-evolve",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A zero-dependency 3D eat-to-evolve browser game.",
+  "type": "module",
+  "scripts": {
+    "check": "node --check public/game.js",
+    "serve": "python3 -m http.server 8123 --directory public",
+    "test:smoke": "node tests/smoke.mjs"
+  }
+}
