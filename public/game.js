@@ -768,10 +768,8 @@ function finishGame() {
     '树冠<br />霸主',
     '你已经吞噬整片丛林，完成了从藤芽幼兽到树冠霸主的进化。最终用时 ' + finalTime + '，得分 ' + score + '。',
     '再来一局',
-    true,
+    false,
   );
-  startButton.onclick = startGame;
-  restartButton.onclick = startGame;
 }
 
 function pauseGame() {
@@ -779,7 +777,6 @@ function pauseGame() {
   state = 'paused';
   pauseButton.textContent = 'Resume';
   showOverlay('暂时<br />休息', '丛林不会消失。准备好后继续移动，找到下一只可以吞噬的猎物。', '继续探索', false);
-  startButton.onclick = resumeGame;
 }
 
 function resumeGame() {
@@ -787,7 +784,6 @@ function resumeGame() {
   state = 'playing';
   hideOverlay();
   pauseButton.textContent = 'Pause';
-  startButton.onclick = startGame;
 }
 
 function togglePause() {
